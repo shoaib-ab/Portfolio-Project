@@ -1,0 +1,857 @@
+ *,
+ *::after,
+ *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+ }
+ 
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ html{
+    font-size: 62.5%;
+ }
+
+ /* ############## Element Styling ############# */
+
+ h1{
+    font-size: 3rem;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+ }
+
+ h2{
+    font-size: 2.5rem;
+ }
+ p,li{
+    font-size: 1.6rem;
+ }
+
+ a{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.09em;
+ }
+
+
+ /* ############ Utility Classes ############ */
+
+ .text-red{
+    color: #dc143c;
+ }
+
+ .text-light{
+    color: #ffffff;
+ }
+
+ .text-dark{
+    color: #394450;
+ }
+
+.btn{
+    display:block;
+    padding: 0.5em 2em;
+    margin: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #dc143c;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary{
+    padding: 0.7em 2em;
+    font-size: 2.5rem;
+    margin: 3rem 0;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.btn:hover{
+    background-color:  #dc143c;
+}
+
+.container{
+    max-width: 1300px;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* ##################### navbar Section Styling ###################### */
+
+/* ###### for desktop mode ####### */
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #394450;
+    opacity: 0.85;
+}
+
+.navbar-container{
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu-items{
+    order: 2;
+    display: flex;
+}
+
+.navbar .menu-items li{
+    list-style-type: none;
+    margin-left: 4rem;
+}
+
+.navbar .menu-items a{
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+    font-weight: 300;
+}
+
+.navbar .menu-items a:hover{
+    color: #dc143c;
+}
+
+
+
+/* ########################## Showcase styling ################## */
+
+#showcase{
+    background:linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url("./hero-bg.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-left: 5rem;
+}
+.showcase-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:flex-start;
+    height: 100%;
+}
+
+.showcase-content h1{
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.showcase-content h1.text-red{
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+/* ########################## Services Styling ############## */
+
+#services{
+    background-color: #fff;
+    margin: 8rem 2rem;
+}
+
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-container .services-content{
+    width: 90%;
+    flex-grow: 1 1 600px;
+    text-align: center;
+    padding: 1rem 30rem;
+    line-height: 2.5rem;
+}
+
+.service-title{
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+}
+
+.services-container .services-content p{
+    color:#777;
+}
+
+.services-container .services-images{
+    width: 24%;
+}
+
+.services-images .image-container img{
+    display: block;
+    height: 350px;
+    width: 100%;
+    border-radius:2rem;
+
+}
+
+.image-container{
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 10px 20px #fff;
+}
+
+.image-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    color: #bcbcbc;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 1rem;
+    z-index: 5;
+    animation: show 2s forwards 0.3s 1 ease-in-out;
+}
+
+
+.image-text h3{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: ddd;
+}
+
+.image-text i{
+    margin-bottom: 5rem;
+    font-size: 5rem;
+}
+.image-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: #000000d5;
+    border-radius:2rem;
+}
+
+
+
+/* ###################### Project Section Styling ################ */
+
+#projects{
+    padding: 10rem 0;
+    background-color: #ecebeb;
+}
+
+.project-title{
+    font-size: 6rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+    text-transform: uppercase;
+}
+.project-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-wrapper{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+
+
+.project-container .project-description,
+.project-container .project-image{
+    width: 50%;
+    flex: 1 300px;
+    box-shadow: 0px 5px 10px #394450ab;
+
+}
+
+.project-container .project-image img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-container .project-description{
+    height: 402px;
+    line-height: 2.5rem;
+    background-color: #394450;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #ccc;
+
+}
+
+
+.project-container .project-description h1{
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.project-image{
+    position: relative;
+}
+
+.project-image::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    opacity: 0.95;
+}
+
+
+/* ######################### About Section Styling ################ */
+
+
+#about{
+    padding: 20rem 0 0 0;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.about-description{
+    line-height: 2.7em;
+    max-width:600px ;
+    padding-top: 2rem ;
+    padding-bottom: 2rem ;
+    flex: 1 1 250px;
+}
+
+.left{
+    height: 500px;
+    width: 300px;
+}
+.about-container img{
+    display: block;
+    height: 330px;
+    width: 280px;
+    margin-top: 08rem;
+    object-position:center;
+    object-fit: cover;
+}
+
+.about-image{
+    position: relative;
+}
+.about-image::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 28px;  
+    height: 98%;
+    width: 96%;
+    border: 10px solid crimson;
+    z-index:-1;
+}
+.about-title{
+    font-size: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    line-height: 5rem;
+}
+.about-description h3{
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.about-description p{
+    color: #565656;
+}
+
+
+.about-description a{
+    display:inline-block;
+    padding: 0.7em 1em;
+    margin: 2rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #dc143c;
+    color: #444;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.about-description a:hover{
+    background-color: #dc143c;
+    color: #fff;
+}
+
+
+/* ##################### Contact Section Stylig ################ */
+
+#contact{
+    padding: 15rem 0 25rem 0;
+    background-color: #efefef41;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.phone, .email, .address{
+    height: 180px;
+    width: 350px;
+    background-color: #394450;
+    color: #fff;
+    box-shadow:5px 5px 10px #aaa ;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+
+}
+
+.contact-container h2{
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+
+i{
+    font-size: 3rem;
+    margin-left: 0;
+    margin-top: 2rem;
+    margin: 2rem auto;
+    padding-left: 2rem;
+    color: #dc143c;
+}
+
+
+
+/* ############### foooter Styling ############ */
+
+ .footer{
+    padding-bottom:3rem;
+    padding-top:3rem;
+    background-color: #394450;
+    text-align: center;
+    color: #fff;
+ }
+
+ .footer h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+ }
+
+ .footer h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom:1rem ;
+ }
+
+
+ /* ########### Media Queries ############ */
+
+
+ @media (max-width: 575px){
+
+   #showcase{
+    padding: 0px;
+    margin: 0px;
+   }
+
+   .navbar{
+    margin: 0;
+    padding: 0;
+   }
+    .navbar .navbar-container h1{
+        font-size: 2rem;
+    }
+
+    #showcase .showcase-content > h1{
+        font-size: 3rem;
+    }
+    #showcase .showcase-content{
+        padding-left: 2rem;
+    }
+
+
+    .btn-primary{
+        font-size: 2rem;
+        padding: 0.5em 1em;
+    }
+
+    /* .showcase-content{
+        display: none;
+    } */
+
+    .services-container{
+        flex-direction: column;
+    }
+    .services-container .services-content{
+        width: 100%;
+        padding: 2rem 0;
+        text-align: start;
+    }
+
+    .service-title,
+    .project-title,
+    .about-title{
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    .project-container .project-description h1{
+        font-size: 3rem;
+    }
+
+    .services-container .services-images{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .project-wrapper .project-image{
+        order:2;
+    }
+    .project-wrapper .project-description{
+        order:1;
+    }
+
+    #about .about-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-description{
+        padding: 0;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer{
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-container{
+        position:relative;
+    }
+
+    .navbar input[type='checkbox'],
+    .navbar .hamburger-lines{
+        display: block;
+    } 
+
+    .navbar .navbar-container input[type='checkbox']{
+        display: block;
+        position:absolute;
+        height: 32px;
+        width: 40px;
+        top: 15px;
+        left:80%;
+
+        z-index: 999;
+        opacity: 0;
+    }
+
+    .navbar .hamburger-lines{
+        /* background-color: #dc143c; */
+        position: absolute;
+        height: 32px;
+        width:40px;
+        top: 15px;
+        left: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+
+        background-color: #000;
+    }
+
+
+    .navbar .navbar-container .menu-items{
+        display: flex;
+        flex-direction: column;
+        /* padding-right:100vw; */
+        margin-top: 29rem;
+        margin-right: -1.777rem;
+        padding-top: 30vh;
+        background-color: #394450;
+
+        transform: translate(110%);
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+
+    }
+
+    
+    .navbar .navbar-container .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 4rem;
+        font-weight: 700;
+        padding-right: 5rem;
+    }
+
+    .navbar .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .hamburger-lines .line2{
+        transform: scaley(1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .navbar-container input[type='checkbox']:checked ~ .menu-items{
+        transform: translate(0%);
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line{
+        background-color: #fff;
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line1{
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line2{
+        background-color: #fff;
+        transform: scaley(0);
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
+       transform: rotate(-45deg);
+    }
+
+}
+
+
+    @media (min-width: 575px) and (max-width:767px){
+         #showcase{
+    padding: 0px;
+    margin: 0px;
+   }
+
+   .navbar{
+    margin: 0;
+    padding: 0;
+   }
+    .navbar .navbar-container h1{
+        font-size: 3rem;
+    }
+
+    #showcase .showcase-content > h1{
+        font-size: 4rem;
+    }
+    #showcase .showcase-content{
+        padding-left: 2rem;
+    }
+
+
+    .btn-primary{
+        font-size: 2rem;
+        padding: 0.5em 1em;
+    }
+
+    /* .showcase-content{
+        display: none;
+    } */
+
+    .services-container{
+        flex-direction: column;
+    }
+    .services-container .services-content{
+        width: 100%;
+        padding: 2rem 0;
+        text-align: start;
+    }
+
+    .service-title,
+    .project-title,
+    .about-title{
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    .project-container .project-description h1{
+        font-size: 3rem;
+    }
+
+    .services-container .services-images{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .project-wrapper .project-image{
+        order:2;
+    }
+    .project-wrapper .project-description{
+        order:1;
+    }
+
+    #about .about-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-description{
+        padding: 0;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer{
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-container{
+        position:relative;
+    }
+
+    .navbar input[type='checkbox'],
+    .navbar .hamburger-lines{
+        display: block;
+    } 
+
+    .navbar .navbar-container input[type='checkbox']{
+        display: block;
+        position:absolute;
+        height: 32px;
+        width: 40px;
+        top: 15px;
+        left:90%;
+
+        z-index: 999;
+        opacity: 0;
+    }
+
+    .navbar .hamburger-lines{
+        /* background-color: #dc143c; */
+        position: absolute;
+        height: 32px;
+        width:40px;
+        top: 15px;
+        left: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+
+        background-color: #000;
+    }
+
+
+    .navbar .navbar-container .menu-items{
+        display: flex;
+        flex-direction: column;
+        /* padding-right:100vw; */
+        margin-top: 29rem;
+        margin-right: -3.2rem;
+        padding-top: 30vh;
+        background-color: #394450;
+
+        transform: translate(110%);
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+
+    }
+
+    
+    .navbar .navbar-container .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 4rem;
+        font-weight: 700;
+        padding-right: 5rem;
+    }
+
+    .navbar .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .hamburger-lines .line2{
+        transform: scaley(1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .navbar-container input[type='checkbox']:checked ~ .menu-items{
+        transform: translate(0%);
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line{
+        background-color: #fff;
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line1{
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line2{
+        background-color: #fff;
+        transform: scaley(0);
+    }
+    .navbar .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
+       transform: rotate(-45deg);
+    }
+    }
+
+      
+
+
